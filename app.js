@@ -6,6 +6,7 @@ const path = require("path");
 const MongoStore = require("connect-mongo");
 const connectDB = require("./config/db");
 
+
 //load config
 dotenv.config({ path: "./config/config.env" });
 require("./config/passport")(passport);
@@ -13,6 +14,9 @@ require("./config/passport")(passport);
 connectDB();
 
 const app = express();
+
+const Server = require("http").createServer(app);
+require("./config/socket")(Server);
 
 app.set("view engine", "pug");
 //body parser
@@ -44,6 +48,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", require("./routes/index"));
 app.use("/", require("./routes/auth"));
 
+//socket();
 const PORT = process.env.PORT;
 
-app.listen(PORT, console.log(`app is running on  http:/localhost/${PORT} `));
+Server.listen(PORT, console.log(`app is running on  http:/localhost/${PORT} `));
+module.exports = app;

@@ -12,6 +12,11 @@ router.get("/", (req, res) => {
   });
 });
 
+//chat page
+router.get("/chat", ensureAuth, (req, res) => {
+  res.render("chat.pug");
+});
+
 //GET /products
 router.get("/products", (req, res) => {
   Product.find({}, (err, products) => {

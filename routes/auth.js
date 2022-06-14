@@ -17,10 +17,10 @@ router.post(
 // POST register
 router.post("/register", async (req, res) => {
   try {
-    let hash = await argon2.hash(req.body.password);
+    let hash = await argon2.hash(req.body.rpassword);
     const newUser = {
-      username: req.body.username,
-      email: req.body.email,
+      username: req.body.rusername,
+      email: req.body.remail,
       password: hash,
     };
     let user = await User.findOne({ email: newUser.email });
@@ -47,7 +47,7 @@ router.get("/logout", (req, res, next) => {
     if (err) {
       return next(err);
     }
-    res.redirect("/login");
+    res.redirect("/");
   });
 });
 

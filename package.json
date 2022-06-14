@@ -1,6 +1,6 @@
 {
  
-  "name": "",
+  "name": "jade",
  
   "author": "",
  
@@ -11,13 +11,18 @@
   "main": "server.js",
  
   "scripts": {
-    
+ 
+   
   "test": "mocha",
+ 
    
   "start": "node server.js",
  
    
-  "dev": "nodemon server.js"
+  "dev": "nodemon server.js",
+ 
+   
+  "e2e": "cypress open"
  
   },
  
@@ -30,7 +35,7 @@
   "connect-mongo": "^4.6.0",
  
    
-  "cookie-parser": "^1.4.5",
+  "cookie-parser": "^1.4.6",
  
    
   "dotenv": "^16.0.1",
@@ -64,7 +69,6 @@
  
   },
  
-
   "license": "MIT",
  
   "devDependencies": {
@@ -73,10 +77,19 @@
   "chai": "^4.3.6",
  
    
+  "chai-http": "^4.3.0",
+ 
+   
+  "cypress": "^10.1.0",
+ 
+   
   "mocha": "^10.0.0",
  
    
-  "request": "^2.88.2"
+  "request": "^2.88.2",
+ 
+   
+  "zombie": "^6.1.4"
  
   }
 }

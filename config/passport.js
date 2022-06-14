@@ -7,17 +7,18 @@ module.exports = function (passport) {
   passport.use(
     new LocalStrategy(
       {
-        usernameField: "email",
+        usernameField: "lemail",
+        passwordField: "lpassword",
       },
-      async (email, password, done) => {
+      async (lemail, lpassword, done) => {
         try {
-          let user = await User.findOne({ email: email });
+          let user = await User.findOne({ email: lemail });
           if (!user) {
             // user = await User.create(newUser);
             done(null, false, { emessage: "wrong email or password" });
           }
 
-          if (user && (await argon2.verify(user.password, password))) {
+          if (user && (await argon2.verify(user.password, lpassword))) {
             done(null, user);
           } else {
             done(null, false, { emessage: "wrong email or password" });

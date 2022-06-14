@@ -22,12 +22,12 @@ html
       form(action='/login', method='post').center
         div
           label Email:
-          input(type='text', name='email')
+          input(type='text', name='lemail', class="lemail")
         div
           label Password:
-          input(type='password', name='password')
+          input(type='password', name='lpassword',class="lpassword")
         div
-          input(type='submit', value='Log In')
+          input(type='submit', value='Log In',class="login-btn")
           
    
       hr
@@ -35,13 +35,13 @@ html
       form(action='/register', method='post').center
         div
           label Username:
-          input(type='text', name='username')
+          input(type='text', name='rusername')
         div
           label Email:
-          input(type='text', name='email')
+          input(type='text', name='remail')
         div
           label Password:
-          input(type='password', name='password')
+          input(type='password', name='rpassword')
         
         div
           input(type='submit', value='Register')

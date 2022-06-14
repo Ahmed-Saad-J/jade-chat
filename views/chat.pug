@@ -1,0 +1,22 @@
+html
+  head
+    title chat room
+    meta(name='description', content='Home page')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/style.css')
+  body
+    h2.center hmmmmmmm
+    .chat.center
+      p#num-users
+      .chat-box
+        ul#messages
+        form(action='')
+          input#m(autocomplete='off')
+          button Send
+      a#logout(href='/logout') Logout
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js', integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=', crossorigin='anonymous')
+    <script src='/socket.io/socket.io.js'></script>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+    script(async, defer, src='/client.js')
