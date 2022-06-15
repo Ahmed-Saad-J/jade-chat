@@ -1,0 +1,38 @@
+@use "../util" as u;
+
+div > input {
+  margin: 0.5rem;
+}
+
+.login {
+  border: solid 2px #777;
+  width: 50%;
+  background-color: aliceblue;
+}
+
+a.text {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+form {
+  padding: u.rem(3);
+  width: clamp(u.rem(250),40vw,u.rem(500));
+}
+
+form input {
+  background-color: #eee;
+  border: var(--secondary-color) solid 2px;
+  padding: u.rem(10); 
+  width: 90%; 
+  margin-right: .5%;
+}
+
+.register-btn,.login-btn,.send-msg { 
+  width: 90%;
+  border: var(--secondary-color) solid 2px !important;
+  padding: u.rem(10); 
+  margin-right: .5%;
+  margin-top: u.rem(15);
+}
+

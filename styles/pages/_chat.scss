@@ -1,0 +1,23 @@
+@use "../util" as u;
+
+.chat{
+    width:clamp(u.rem(250),90vw,u.rem(1100));
+    margin-inline: auto;
+  } 
+#messages { 
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    height: 20em;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  
+  #messages li { 
+    padding: 5px 10px;
+  }
+  
+  #messages li:nth-child(odd) { 
+    background: #eee;
+  }

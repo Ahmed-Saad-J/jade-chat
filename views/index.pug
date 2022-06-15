@@ -1,21 +1,14 @@
 html
   head
-    title ChatApp
+    title jade chat
     meta(name='description', content='Home page')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/style.css')
-  body
-    h1.border.center ChatApp
-    h2.center#pug-success-message
+    link(rel='stylesheet', href='/css/styles.css')
    
-    | #{title}
-    p#pug-variable=message
-    
-    
-    
-
+  body
+    h1.border.center jade chat
       hr
       h2.center Login Form
        p#login-err=emessage
@@ -44,5 +37,5 @@ html
           input(type='password', name='rpassword')
         
         div
-          input(type='submit', value='Register')
+          input(type='submit', value='Register',class="register-btn")
 
