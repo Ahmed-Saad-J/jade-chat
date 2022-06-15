@@ -24,7 +24,7 @@ $(document).ready(function () {
   });
 
   socket.on('chat message', (data) => {
-    $('#messages').append($('<li>').text(`${data.name}: ${data.message}`));
+    $('#messages').append($('<li class="msg">').text(`${data.name}: ${data.message}`));
   });
 
 });
