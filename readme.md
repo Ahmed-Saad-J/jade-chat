@@ -9,15 +9,15 @@ i used passport for user authintication, and socket io for chatting
 
 ### home page
 
-![alt text](/sreenShots/home.PNG)
+![alt text](/screenShots/home.PNG)
 
 ### chat page
 
-![alt text](/sreenShots/chat.PNG)
+![alt text](/screenShots/chat.PNG)
 
 ### cypress e2e tests
 
-![alt text](/sreenShots/test.PNG)
+![alt text](/screenShots/test.PNG)
 
 
 
